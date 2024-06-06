@@ -1,0 +1,26 @@
+#date-picker {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+#date-picker label {
+    margin-right: 1rem;
+}
+.code-frame {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+}
+form{
+    width: 900px;
+    height: 120%;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 400px;
+}
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}

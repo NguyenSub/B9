@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="BTb9.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Form Đăng ký</h1>
+  <form action="" onsubmit="return validateform()" name="frm_dk">
+    <p>Họ <input type="text" name="txt_ho" size="20"></p>
+    <p>Tên <input type="text" name="txt_ten" size="20"></p>
+    <p>Giới tính:
+      <input type="radio" id="gioi_tinh_nam" name="gioi_tinh" value="Nam"> Nam
+      <input type="radio" id="gioi_tinh_nu" name="gioi_tinh" value="Nữ"> Nữ
+    </p>
+    <p>Số điện thoại: <input type="tel" id="txt_dienthoai" name="dienthoai" size="20"></p>
+    <p>
+        Ngày sinh: <label for="txtDate"></label>
+        <input type="date" id="txtDate" name="txtDate" min="2000-01-01" />
+      </p>
+    <p>Sở thích:</p>
+    <p>
+      <input type="checkbox" id="cb_sach" name="sothich[]" value="Sach"> Đọc sách
+      <input type="checkbox" id="cb_phim" name="sothich[]" value="Phim"> Xem phim
+      <input type="checkbox" id="cb_nhac" name="sothich[]" value="Nhac"> Nghe nhạc
+      <input type="checkbox" id="cb_game" name="sothich[]" value="Game"> Chơi game
+    </p>
+    <p>Khác: <input type="text" id="txt_khac" name="khac" size="20"> <span id="khac_error"></span></p>
+    <button type="submit">Đăng ký</button>
+    <button type="reset">Nhập lại</button>
+  </form>
+  <script>
+    function validateform() {
+      var khac = document.getElementById("txt_khac").value;
+      var khacCheckbox = document.getElementById("cb_khac");
+
+      if (khacCheckbox.checked && khac.trim() === "") {
+        document.getElementById("khac_error").textContent = "Vui lòng nhập sở thích khác";
+        return false;
+      } else {
+        document.getElementById("khac_error").textContent = "";
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
